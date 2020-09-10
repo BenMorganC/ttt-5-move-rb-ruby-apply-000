@@ -1,3 +1,10 @@
+def input_to_index(user_input)
+  input = user_input.to_i - 1 
+end
+
+board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
+
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -7,13 +14,8 @@ def display_board(board)
 end
 
 
-def input_to_index(user_input)
-  user_input.to_i - 1 
-end
-
-
 def move(board, index, character = "X")
-  board[index] = character
+  board[index.to_i] = character
 end
 
 def update_board_at_with(board, index, character = "X")

@@ -7,7 +7,8 @@ board =  [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 puts "Welcome to Tic Tac Toe!"
 puts "Where would you like to go?"
 user_input = gets.strip
+display_board(board)
 index = input_to_index(user_input)
 move(board, index, character = "X")
+update_board_at_with(board, index, character="X")
 display_board(board)
-update_board_at_with(board, index, character = "X")
